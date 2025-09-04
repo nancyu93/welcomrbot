@@ -4,7 +4,8 @@ process.on('unhandledRejection', error => {
 });
 
 const { Client, Events, GatewayIntentBits, EmbedBuilder } = require('discord.js');
-const { token } = require('./config.json');
+const token = process.env.TOKEN;
+
 
 // 創建一個客戶端實例，並開啟必要的 intents
 const client = new Client({
